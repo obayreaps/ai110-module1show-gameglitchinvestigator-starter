@@ -5,8 +5,14 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
+  In the beginning, the guess input didn't load until 30 seconds later.
+
 - List at least two concrete bugs you noticed at the start  
   (for example: "the secret number kept changing" or "the hints were backwards").
+  1. Number constraints weren't properly implemented. Guess is 1, but hint says "go lower". I expect correct guess to be higher.
+  2. Attempts allowed text are not 1:1 with attempts left in beginning. I expect when playing normal, for attempts allowed to be 7, not 8.
+  3. New game btn does not work. I expect the game to refresh including the attempts left.
+  4. Gameover prompts when you have 1 attempt left. I expect the game to be over when user reaches 0 attempts.
 
 ---
 
