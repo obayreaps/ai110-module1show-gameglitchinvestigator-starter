@@ -32,17 +32,25 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 3. Debugging and testing your fixes
 
 - How did you decide whether a bug was really fixed?
+  I enter streamlit and playtest myself. If it didn't work, then I would report the issue to Claude.
 - Describe at least one test you ran (manual or using pytest)  
-  and what it showed you about your code.
+   and what it showed you about your code.
+  I ran a test to ensure if I get the certain score like 60, and secret being 50, it would prompt me to go lower. It showed me that the code originally didn't work as intended until I implemented the fix with Claude.
 - Did AI help you design or understand any tests? How?
+  AI did help. It told me the logic of how the testcase is going to work, and asked for my permission if it should integrate the change or not.
 
 ---
 
 ## 4. What did you learn about Streamlit and state?
 
 - In your own words, explain why the secret number kept changing in the original app.
+  I learned that streamlit re-ran the entire script, thus genreratig a secret number.
+
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+  Streamlit can be thought of as a whiteboard. It would erase and insert a new value.
+
 - What change did you make that finally gave the game a stable secret number?
+  It only generates once due to the condition "if 'secret' not in st.session_state".
 
 ---
 
@@ -50,5 +58,10 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
   - This could be a testing habit, a prompting strategy, or a way you used Git.
+    Manually finding where the source of bug is, and having Claude explain the code section.
 - What is one thing you would do differently next time you work with AI on a coding task?
+  Prompt AI to explain more of the changes, instead of blindly accepting them.
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+  Being thoughful and observantn of the new changes is a good skill I learned. You don't want to accept changes without review first.
+
+docs: finalized README and reflection
