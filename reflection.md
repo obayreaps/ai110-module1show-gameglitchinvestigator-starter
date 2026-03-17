@@ -19,8 +19,13 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 2. How did you use AI as a teammate?
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
+  I used Claude AI Chatbot to help fix the bugs
+
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
+  An example AI suggested that was correct is fixing the original bug for guessing higher or lower. I verified by looking at the old and new change, and saw the difference in how the old message suggested the wrong direction. Thus when I implemented the change and playtest using streamlit, the guessing mechanic worked. I first narrow the source of this bug, then used AI to analyze the section and debug it.
+
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
+  For the two bugs I went out to fix, I don't think there was a suggestion AI made that was either incorrect or misleading. Though, when I did refactor the check_guess into logic_utils.py function, I ran into the "TypeError: '>' not supported between isntances of 'int' and 'str'. Claude forgot to bring a functionality to the logic_util.py so we addressed that. I verified if the guess was working and it did.
 
 ---
 
